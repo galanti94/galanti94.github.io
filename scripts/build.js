@@ -46,19 +46,19 @@ try {
 
         // 1. Title
         html = html.replace(
-            '<title>Tech Vocation Finder | Descubra sua carreira na Tecnologia</title>',
-            `<title>Vocação Tech: ${info.title}</title>`
+            '<title>Perfil Tech | Descubra seu perfil na Tecnologia</title>',
+            `<title>Perfil Tech: ${info.title}</title>`
         );
 
         // 2. OG Title
         html = html.replace(
-            'property="og:title" content="Tech Vocation Finder 🧭"',
+            'property="og:title" content="Perfil Tech 🧭"',
             `property="og:title" content="Sou: ${info.title}!"`
         );
 
         // 3. OG Description
         html = html.replace(
-            'property="og:description" content="Deslize cards, responda perguntas e descubra qual carreira na tecnologia combina com você."',
+            'property="og:description" content="Responda algumas perguntas e descubra seu perfil Tech na tecnologia."',
             `property="og:description" content="${info.desc}"`
         );
 
@@ -71,11 +71,11 @@ try {
 
         // 5. Twitter Logic
         html = html.replace(
-            'content="Tech Vocation Finder 🧭"',
+            'content="Perfil Tech 🧭"',
             `content="Sou: ${info.title}!"`
         );
         html = html.replace(
-            'content="Descubra sua carreira ideal na tecnologia em segundos."',
+            'content="Descubra seu perfil Tech na tecnologia."',
             `content="${info.desc}"`
         );
         html = html.replace(

@@ -157,12 +157,12 @@ const GAME_DATA = {
             "description": "Onde o filho chora e a mãe não vê. É a lógica pura, os servidores que fritam de madrugada e o banco de dados que é o coração de tudo.\n\nÉ o Batman do código. Ninguém sabe quem ele é enquanto tudo funciona, mas se o servidor cai, ele é o herói que salva o dia (geralmente à base de café e ódio). \"Se tá rodando, não mexe!\"",
             "keywords": ["Lógica Pura", "Resolução de Problemas", "Infraestrutura", "Autonomia"],
             "courses": [
-                { "title": "Lógica de Programação", "provider": "Curso em Vídeo", "icon": "fa-solid fa-code", "url": "#" },
-                { "title": "Node.js na Prática", "provider": "Rocketseat", "icon": "fa-brands fa-node", "url": "#" },
-                { "title": "Bancos de Dados SQL", "provider": "Udemy", "icon": "fa-solid fa-database", "url": "#" },
-                { "title": "API REST com Express", "provider": "Alura", "icon": "fa-solid fa-server", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "Lógica de Programação", "provider": "Udemy", "icon": "fa-solid fa-code", "url": COURSE_LINKS["Lógica de Programação"] },
+                { "title": "Node.js na Prática", "provider": "Udemy", "icon": "fa-brands fa-node", "url": COURSE_LINKS["Node.js na Prática"] },
+                { "title": "Bancos de Dados SQL", "provider": "Udemy", "icon": "fa-solid fa-database", "url": COURSE_LINKS["Bancos de Dados SQL"] },
+                { "title": "API REST com Express", "provider": "Udemy", "icon": "fa-solid fa-server", "url": COURSE_LINKS["API REST com Express"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         },
         "frontend": {
@@ -170,12 +170,12 @@ const GAME_DATA = {
             "description": "Tudo que é bonitinho e clicável. Ele vive para garantir que o usuário não tenha um colapso tentando achar um botão.\n\nTem TOC com botão desalinhado por 1 pixel. Se a cor do ícone estiver errada, ele nem dorme. Adora ver o resultado imediato e dizer: \"Olha que coisa linda que eu fiz!\".",
             "keywords": ["Criatividade Visual", "Atenção a Detalhes", "Empatia com Usuário", "Inovação"],
             "courses": [
-                { "title": "HTML & CSS Completo", "provider": "Origamid", "icon": "fa-brands fa-html5", "url": "#" },
-                { "title": "JavaScript Moderno", "provider": "Udemy", "icon": "fa-brands fa-js", "url": "#" },
-                { "title": "React para Iniciantes", "provider": "Rocketseat", "icon": "fa-brands fa-react", "url": "#" },
-                { "title": "UI Design Básico", "provider": "Figma", "icon": "fa-brands fa-figma", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "HTML & CSS Completo", "provider": "Udemy", "icon": "fa-brands fa-html5", "url": COURSE_LINKS["HTML & CSS Completo"] },
+                { "title": "JavaScript Moderno", "provider": "Udemy", "icon": "fa-brands fa-js", "url": COURSE_LINKS["JavaScript Moderno"] },
+                { "title": "React para Iniciantes", "provider": "Udemy", "icon": "fa-brands fa-react", "url": COURSE_LINKS["React para Iniciantes"] },
+                { "title": "UI Design Básico", "provider": "Udemy", "icon": "fa-brands fa-figma", "url": COURSE_LINKS["UI Design Básico"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         },
         "data": {
@@ -183,12 +183,12 @@ const GAME_DATA = {
             "description": "Torturar os números até eles confessarem a verdade. É o mago das planilhas infinitas e das IAs que vão (ou não) dominar o mundo.\n\n\"Contra fatos não há argumentos, mas eu tenho um gráfico que prova o contrário.\" Adora prever o futuro e descobrir padrões que ninguém mais viu. É o amigo que sempre diz: \"Eu avisei, os dados mostravam!\".",
             "keywords": ["Pensamento Analítico", "Curiosidade", "Matemática", "Visão de Futuro"],
             "courses": [
-                { "title": "Python para Dados", "provider": "DataCamp", "icon": "fa-brands fa-python", "url": "#" },
-                { "title": "SQL para Análise", "provider": "Udemy", "icon": "fa-solid fa-table", "url": "#" },
-                { "title": "Estatística Básica", "provider": "Khan Academy", "icon": "fa-solid fa-chart-pie", "url": "#" },
-                { "title": "Power BI", "provider": "Microsoft", "icon": "fa-solid fa-chart-simple", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "Python para Dados", "provider": "Udemy", "icon": "fa-brands fa-python", "url": COURSE_LINKS["Python para Dados"] },
+                { "title": "SQL para Análise", "provider": "Udemy", "icon": "fa-solid fa-table", "url": COURSE_LINKS["SQL para Análise"] },
+                { "title": "Estatística Básica", "provider": "Udemy", "icon": "fa-solid fa-chart-pie", "url": COURSE_LINKS["Estatística Básica"] },
+                { "title": "Power BI", "provider": "Udemy", "icon": "fa-solid fa-chart-simple", "url": COURSE_LINKS["Power BI"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         },
         "pm": {
@@ -196,12 +196,12 @@ const GAME_DATA = {
             "description": "O meio de campo entre o cliente que não sabe o que quer e o dev que não quer ser incomodado. Organiza as tarefas para ninguém surtar.\n\nO mestre do post-it e das reuniões que (esperamos) não poderiam ter sido um e-mail. Adora ver o cronograma ficando verde e o projeto nascendo sem o caos absoluto. \"Gente, foco no MVP!\"",
             "keywords": ["Liderança", "Organização", "Comunicação", "Visão de Negócio"],
             "courses": [
-                { "title": "Gestão Ágil (Scrum/Kanban)", "provider": "Udemy", "icon": "fa-solid fa-list-check", "url": "#" },
-                { "title": "Product Management", "provider": "PM3", "icon": "fa-solid fa-briefcase", "url": "#" },
-                { "title": "Comunicação Não-Violenta", "provider": "Coursera", "icon": "fa-solid fa-comments", "url": "#" },
-                { "title": "Jira & Trello", "provider": "Atlassian", "icon": "fa-brands fa-trello", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "Gestão Ágil", "provider": "Udemy", "icon": "fa-solid fa-list-check", "url": COURSE_LINKS["Gestão Ágil"] },
+                { "title": "Product Management", "provider": "Udemy", "icon": "fa-solid fa-briefcase", "url": COURSE_LINKS["Product Management"] },
+                { "title": "Comunicação Não-Violenta", "provider": "Udemy", "icon": "fa-solid fa-comments", "url": COURSE_LINKS["Comunicação Não-Violenta"] },
+                { "title": "Gestão de Projetos", "provider": "Udemy", "icon": "fa-brands fa-trello", "url": COURSE_LINKS["Gestão de Projetos"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         },
         "qa": {
@@ -209,12 +209,12 @@ const GAME_DATA = {
             "description": "Destruir o que os outros criaram (mas para o bem deles!). Encontra buracos na segurança e bugs onde ninguém imaginava.\n\nÉ o \"advogado do diabo\". Não confia nem na própria sombra e sua frase favorita é: \"E se eu clicar aqui, explode?\". Protege os dados da galera como se fossem os seus próprios segredos.",
             "keywords": ["Criterioso", "Investigativo", "Preventivo", "Segurança"],
             "courses": [
-                { "title": "Testes Automatizados", "provider": "Udemy", "icon": "fa-solid fa-robot", "url": "#" },
-                { "title": "Cibersegurança Básica", "provider": "Google", "icon": "fa-solid fa-shield-cat", "url": "#" },
-                { "title": "Selenium & Cypress", "provider": "Alura", "icon": "fa-solid fa-bug", "url": "#" },
-                { "title": "Hacking Ético", "provider": "Coursera", "icon": "fa-solid fa-user-secret", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "Testes Automatizados", "provider": "Udemy", "icon": "fa-solid fa-robot", "url": COURSE_LINKS["Testes Automatizados"] },
+                { "title": "Cibersegurança Básica", "provider": "Udemy", "icon": "fa-solid fa-shield-cat", "url": COURSE_LINKS["Cibersegurança Básica"] },
+                { "title": "Cypress", "provider": "Udemy", "icon": "fa-solid fa-bug", "url": COURSE_LINKS["Cypress"] },
+                { "title": "Hacking Ético", "provider": "Udemy", "icon": "fa-solid fa-user-secret", "url": COURSE_LINKS["Hacking Ético"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         },
         "mobile": {
@@ -222,12 +222,12 @@ const GAME_DATA = {
             "description": "Criar apps que viciam e jogos que fazem a gente perder a noção da hora. O foco é a palma da mão e a diversão total.\n\nVive num mundo paralelo de pixels e jogabilidade. Quer que tudo seja rápido, fluido e incrível. É quem transforma um celular simples numa máquina de entretenimento épica.",
             "keywords": ["Interatividade", "Dinâmico", "Foco no Usuário", "Inovação"],
             "courses": [
-                { "title": "Desenvolvimento de Jogos", "provider": "Udemy", "icon": "fa-solid fa-gamepad", "url": "#" },
-                { "title": "React Native / Flutter", "provider": "Rocketseat", "icon": "fa-brands fa-react", "url": "#" },
-                { "title": "Unity 3D", "provider": "Unity", "icon": "fa-brands fa-unity", "url": "#" },
-                { "title": "UX para Mobile", "provider": "Domestika", "icon": "fa-solid fa-mobile-button", "url": "#" },
-                { "title": "Git & GitHub", "provider": "Curso em Vídeo", "icon": "fa-brands fa-github", "url": "#" },
-                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": "#" }
+                { "title": "Desenvolvimento de Jogos", "provider": "Udemy", "icon": "fa-solid fa-gamepad", "url": COURSE_LINKS["Desenvolvimento de Jogos"] },
+                { "title": "React Native", "provider": "Udemy", "icon": "fa-brands fa-react", "url": COURSE_LINKS["React Native"] },
+                { "title": "Unity 3D", "provider": "Udemy", "icon": "fa-brands fa-unity", "url": COURSE_LINKS["Unity 3D"] },
+                { "title": "UX para Mobile", "provider": "Udemy", "icon": "fa-solid fa-mobile-button", "url": COURSE_LINKS["UX para Mobile"] },
+                { "title": "Git & GitHub", "provider": "Udemy", "icon": "fa-brands fa-github", "url": COURSE_LINKS["Git & GitHub"] },
+                { "title": "Currículo Vaca Roxa", "provider": "Hotmart", "icon": "fa-solid fa-crown", "url": COURSE_LINKS["Currículo Vaca Roxa"] }
             ]
         }
     }

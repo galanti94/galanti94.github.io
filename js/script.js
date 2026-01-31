@@ -234,6 +234,55 @@ function setupControls() {
     // Share Buttons
     document.getElementById('btn-share-linkedin').addEventListener('click', () => shareResult('linkedin'));
     document.getElementById('btn-share-whatsapp').addEventListener('click', () => shareResult('whatsapp'));
+    document.getElementById('btn-download').addEventListener('click', downloadResultImage);
+}
+
+function downloadResultImage() {
+    const element = document.querySelector('.result-content');
+    const originalBtnText = document.querySelector('.courses-section h3').innerText; // Just a marker
+
+    // Use html2canvas
+    html2canvas(element, {
+        backgroundColor: '#F0F2F5', // Match app background
+        scale: 2, // High resolution
+        useCORS: true, // For images
+        onclone: (clonedDoc) => {
+            // Add Watermark to the clone
+            const cloneElement = clonedDoc.querySelector('.result-content');
+
+            // 1. Create Watermark Element
+            const watermark = clonedDoc.createElement('div');
+            watermark.style.position = 'absolute';
+            watermark.style.bottom = '10px';
+            watermark.style.right = '10px';
+            watermark.style.fontSize = '14px';
+            watermark.style.color = 'rgba(0,0,0,0.3)';
+            watermark.style.fontWeight = 'bold';
+            watermark.style.zIndex = '999';
+            watermark.innerText = 'galanti94.github.io';
+
+            // Ensure relative positioning on parent so absolute works
+            cloneElement.style.position = 'relative';
+            cloneElement.appendChild(watermark);
+
+            // 2. Hide buttons in the clone (we don't want them in the image)
+            const buttons = clonedDoc.getElementById('share-buttons');
+            const restartBtn = clonedDoc.getElementById('btn-restart');
+            const courses = clonedDoc.querySelector('.courses-section');
+
+            if (buttons) buttons.style.display = 'none';
+            if (restartBtn) restartBtn.style.display = 'none';
+            if (courses) courses.style.display = 'none';
+
+            // 3. Make rectangle nicer? (Optional)
+            cloneElement.style.borderRadius = '0'; // Flat for image? Or keep rounded. keeping as is.
+        }
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'minha-vocacao-tech.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
 }
 
 function shareResult(platform) {
@@ -245,9 +294,9 @@ function shareResult(platform) {
     const slug = document.getElementById('result-screen').getAttribute('data-career-slug') || 'frontend'; // fallback
 
     // New Text Format: Title + Description (Vibe) + CTA + Link
-    // URL updated to point to results/ folder
-    const text = `${resultTitle}\n\n${resultDesc}\n\nDescubra sua vocação tech aqui: https://galanti94.github.io/results/${slug}.html`;
-    const url = `https://galanti94.github.io/results/${slug}.html`;
+    // URL updated to point to App Root
+    const text = `Meu perfil tech: ${resultTitle} 🚀\n\n${resultDesc}\n\nDescubra sua vocação tech aqui: https://galanti94.github.io`;
+    const url = `https://galanti94.github.io`;
 
     if (platform === 'linkedin') {
         // LinkedIn doesn't support pre-filled text in the same way as WA, usually just URL. 
@@ -296,16 +345,23 @@ function showResults(forceCareerKey = null) {
     if (keywordsContainer) keywordsContainer.innerHTML = '';
     */
 
-    listEl.innerHTML = topCareer.courses.map(course => `
-        <a href="${course.url}" target="_blank" class="course-item">
-            <div class="course-icon"><i class="${course.icon}"></i></div>
-            <div class="course-info">
-                <h4>${course.title}</h4>
-                <p>${course.provider}</p>
+    listEl.innerHTML = topCareer.courses.map(course => {
+        const isSpecial = course.title.includes('Vaca Roxa');
+        const extraClass = isSpecial ? 'special-feature' : '';
+        const iconStyle = isSpecial ? 'color: #FFD700;' : ''; // Gold icon override
+
+        return `
+        <a href="${course.url}" target="_blank" class="course-item ${extraClass}">
+            <div class="course-icon" style="${isSpecial ? 'background: rgba(255,255,255,0.2);' : ''}">
+                <i class="${course.icon}" style="${iconStyle}"></i>
             </div>
-            <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8;"></i>
+            <div class="course-info">
+                <h4 style="${isSpecial ? 'color: #FFD700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);' : ''}">${course.title}</h4>
+                <p style="${isSpecial ? 'color: rgba(255,255,255,0.9);' : ''}">${course.provider}</p>
+            </div>
+            <i class="fa-solid fa-chevron-right" style="margin-left: auto; ${isSpecial ? 'color: rgba(255,255,255,0.6);' : 'color: #94a3b8;'}"></i>
         </a>
-    `).join('');
+    `}).join('');
 
     resultScreen.classList.remove('hidden');
 }

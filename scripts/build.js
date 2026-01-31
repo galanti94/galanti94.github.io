@@ -62,11 +62,11 @@ try {
             `property="og:description" content="${info.desc}"`
         );
 
-        // 4. OG Image (Update text in Placehold.co URL)
-        const safeTitle = info.title.replace(/ /g, '+');
+        // 4. OG Image (Custom Image from assets/share/)
+        // URL must be absolute for Social Networks usually
         html = html.replace(
             /content="https:\/\/placehold\.co\/.*?\?text=Vocacao\+Tech\+Finder"/,
-            `content="https://placehold.co/1200x630/0064E0/FFFFFF/png?text=${safeTitle}"`
+            `content="https://galanti94.github.io/assets/share/${slug}.png"`
         );
 
         // 5. Twitter Logic
@@ -80,7 +80,7 @@ try {
         );
         html = html.replace(
             /content="https:\/\/placehold\.co\/.*?\?text=Vocacao\+Tech\+Finder"/,
-            `content="https://placehold.co/1200x630/0064E0/FFFFFF/png?text=${safeTitle}"`
+            `content="https://galanti94.github.io/assets/share/${slug}.png"`
         );
 
         // 6. Fix Relative Paths for Subdirectory (results/)

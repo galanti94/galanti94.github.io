@@ -52,7 +52,7 @@ try {
 
         // 2. OG Title
         html = html.replace(
-            'property="og:title" content="Perfil Tech 🧭"',
+            'property="og:title" content="Descubra seu Perfil Tech 🧭"',
             `property="og:title" content="Sou: ${info.title}!"`
         );
 
@@ -71,7 +71,7 @@ try {
 
         // 5. Twitter Logic
         html = html.replace(
-            'content="Perfil Tech 🧭"',
+            'content="Descubra seu Perfil Tech 🧭"',
             `content="Sou: ${info.title}!"`
         );
         html = html.replace(

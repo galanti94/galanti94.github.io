@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocação Tech: O Mestre das Engrenagens</title>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Não sabe qual área da TI seguir? Faça o teste tipo Tinder e descubra se você é Frontend, Backend, Dados, QA ou mais! Descubra sua vocação tech agora.">
+    <meta name="author" content="Guilherme Galanti">
+    <meta name="keywords"
+        content="teste vocacional, ti, programação, carreira tech, frontend, backend, dados, qa, quiz">
+    <meta name="theme-color" content="#0064E0">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://galanti94.github.io/tech-vocation-finder/">
+    <meta property="og:title" content="Sou: O Mestre das Engrenagens!">
+    <meta property="og:description"
+        content="Deslize cards, responda perguntas e descubra qual carreira na tecnologia combina com você.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0064E0/FFFFFF/png?text=O+Mestre+das+Engrenagens">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://galanti94.github.io/tech-vocation-finder/">
+    <meta property="twitter:title" content="Sou: O Mestre das Engrenagens!">
+    <meta property="twitter:description" content="Onde o filho chora e a mãe não vê. É a lógica pura, os servidores que fritam de madrugada e o banco de dados que é o coração de tudo.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0064E0/FFFFFF/png?text=O+Mestre+das+Engrenagens">
+
+    <!-- Favicon (SVG Emoji) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FontAwesome, might need a real CDN if this fails, using solid icons SVG below instead to be safe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Intro Screen -->
+        <section id="intro-screen">
+            <div class="intro-content">
+                <h1>Descubra sua<br>Vocação Tech</h1>
+                <p>Responda algumas perguntas e encontre o caminho ideal para sua carreira.</p>
+                <button id="btn-start" class="primary-btn">Começar <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <footer>
+                <p>by <a href="https://github.com/galanti94" target="_blank">Guilherme Galanti</a></p>
+            </footer>
+        </section>
+
+        <!-- Game Interface (Hidden Initially) -->
+        <header id="game-header" class="hidden">
+            <h1>Vocação Tech</h1>
+            <p>Descubra seu futuro na tecnologia</p>
+        </header>
+
+        <main id="card-stack" class="hidden">
+            <!-- Cards will be injected here via JS -->
+            <div id="instruction-overlay">
+                <div class="hand-icon"><i class="fa-regular fa-hand-pointer"></i></div>
+                <p>Arraste para responder</p>
+            </div>
+        </main>
+
+        <div class="controls hidden">
+            <button id="btn-nope" class="control-btn nope"><i class="fa-solid fa-xmark"></i></button>
+            <button id="btn-like" class="control-btn like"><i class="fa-solid fa-heart"></i></button>
+        </div>
+
+        <section id="result-screen" class="hidden">
+            <div class="result-content">
+                <h2 id="career-title">...</h2>
+                <p id="career-description">...</p>
+
+                <div id="share-buttons" class="share-buttons">
+                    <p>Curtiu? Compartilhe:</p>
+                    <div class="buttons-row">
+                        <button id="btn-share-linkedin" class="share-btn linkedin"><i
+                                class="fa-brands fa-linkedin-in"></i></button>
+                        <button id="btn-share-whatsapp" class="share-btn whatsapp"><i
+                                class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                </div>
+
+                <div class="courses-section">
+                    <h3>Trilha Recomendada</h3>
+                    <div class="course-list" id="course-list">
+                        <!-- Courses injected here -->
+                    </div>
+                </div>
+
+                <button id="btn-restart" class="primary-btn">Refazer Teste <i
+                        class="fa-solid fa-rotate-right"></i></button>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
